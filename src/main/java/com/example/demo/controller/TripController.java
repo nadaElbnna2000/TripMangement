@@ -62,12 +62,14 @@ public void updateTrip(
 }
 
 
+
     @GetMapping(path = "/all/{id}")
     public TripModel getTripById(
             @PathVariable Long id
     ){
        return tripService.getTripById(id);
     }
+
 
     @DeleteMapping(path = "/delete/{id}")
     public ResponseEntity<Void> deleteTrip(@PathVariable Long id){

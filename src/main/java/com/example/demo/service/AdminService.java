@@ -27,6 +27,15 @@ public class AdminService {
         return adminRepo.save(admin);
     }
 
+
+
+
+
+
+
+
+
+
     public boolean SignIn(AdminModel admin)  {
         Optional<AdminModel> adminModelOptional = adminRepo.findAdminModelByUserNameAndPassword(admin.getUserName() , admin.getPassword());
         if (adminModelOptional.isPresent()){

@@ -13,15 +13,15 @@ public class AdminModel implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false , updatable = false)
    private Long Id ;
-//    private boolean loggedIn = false;
-//
-//    public boolean isLoggedIn() {
-//        return loggedIn;
-//    }
-//
-//    public void setLoggedIn(boolean loggedIn) {
-//        this.loggedIn = loggedIn;
-//    }
+    private boolean loggedIn = false;
+
+    public boolean isLoggedIn() {
+        return loggedIn;
+    }
+
+    public void setLoggedIn(boolean loggedIn) {
+        this.loggedIn = loggedIn;
+    }
 
    private String email;
   private String password;
@@ -77,9 +77,9 @@ public class AdminModel implements Serializable {
 
 
 
-    public AdminModel(Long Id  , String email, String password, String phone , String userName) {
+    public AdminModel(Long Id  , boolean loggedIn ,  String email, String password, String phone , String userName) {
        this.Id = Id;
-     //  this.loggedIn=loggedIn;
+       this.loggedIn=loggedIn;
         this.email = email;
         this.password = password;
         this.phone = phone;
